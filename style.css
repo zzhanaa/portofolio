@@ -6,23 +6,26 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1a1a1a;
+  background-color: rgba(1, 1, 1, 0.5);
   color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 0.1s ease-in-out;
 }
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  background-color: #333;
+  /* background-color: #333; */
 }
 .boxes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-self: end;
-  grid-gap: 1rem;
+  /* align-self: end; */
+  grid-gap: 0.5rem;
   padding: 5px;
-  margin: 1rem;
+  margin: 0l5rem;
 }
 .box {
   background-color: whitesmoke;
@@ -36,12 +39,81 @@ body {
     "Lucida Sans", Arial, sans-serif;
   align-items: center;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-out;
 }
 .box:hover {
-  transform: translateY(-5px) scale(1.1);
+  transform: translateY(-5px) scale(1.05);
 }
-
+.content {
+  width: 100%;
+  background-color: none;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+.content .home {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+  grid-gap: 2rem;
+  transition: transform 1s ease-in-out;
+  .tulisan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    padding-left: 25%;
+    h2 {
+      animation: slideInFromTop 0.5s ease-out;
+    }
+    p {
+      animation: slideInFromBottom 0.5s ease-out;
+    }
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.content .home .profil {
+  border: 20px solid #d9d9d9;
+}
+.content .visimisi-tulisan {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  h2 {
+    animation: slideInFromTop 0.8s ease-out;
+  }
+  p {
+    animation: slideInFromBottom 0.8s ease-out;
+  }
+}
+.content .note {
+  align-items: center;
+  justify-items: center;
+  margin-top: 3rem;
+  p {
+    animation: slideInFromBottom 0.8s ease-out;
+  }
+}
 .circles {
   display: flex;
   flex-direction: column;
@@ -62,14 +134,7 @@ body {
 .circle:hover {
   transform: scale(1.1);
 }
-.content {
-  width: 400px;
-  height: 300px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 20px;
-  overflow: hidden;
-}
+
 .carousel-item {
   display: none;
   text-align: center;

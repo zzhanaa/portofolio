@@ -10,12 +10,37 @@
     <div class="page">
       <div class="content">
         <div id="home" class="carousel-item">
-          <img src="gpbl.jpg" alt="GPBL Image" />
-          <p>Kegiatan GPBL melibatkan...</p>
+          <div class="home">
+            <div class="tulisan">
+              <h2>ZHANA NUR ASMI QAMARA</h2>
+              <p>
+                I am a third year student of Department of Mathematics at
+                Institute Tedchnology Sepuluh Nopember
+              </p>
+            </div>
+            <img
+              class="profil"
+              src="/galery/foto profil.png"
+              width="50%"
+              alt="foto profil zhana"
+            />
+          </div>
         </div>
         <div id="visimisi" class="carousel-item">
-          <img src="gpbl.jpg" alt="GPBL Image" />
-          <p>Kegiatan GPBL melibatkan...</p>
+          <div class="visimisi-tulisan">
+            <div class="visi">
+              <h2>VISI</h2>
+              <p>Melakukan hal yang terbaik dalam</p>
+            </div>
+            <div class="misi">
+              <h2>MISI</h2>
+              <ol>
+                <li>Belajar dengan tekun</li>
+                <li>Belajar dengan tekun</li>
+              </ol>
+            </div>
+          </div>
+          <div class="note">Zhana Nur Asmi Qamara</div>
         </div>
         <div id="portofolio" class="carousel-item">
           <div class="circles">
@@ -38,6 +63,7 @@
         <div id="kontak" class="carousel-item">
           <img src="gpbl.jpg" alt="GPBL Image" />
           <p>Kegiatan GPBL melibatkan...</p>
+          <div class="note">Zhana Nur Asmi Qamara</div>
         </div>
       </div>
       <div class="boxes">
@@ -53,6 +79,12 @@
     </div>
 
     <script>
+      // Pemetaan background
+      const backgrounds = {
+        home: "/galery/Home.png",
+        visimisi: "/galery/About.png",
+        kontak: "/galery/Contact.png",
+      };
       function showContent(id) {
         // Hapus semua konten aktif
         const items = document.querySelectorAll(".carousel-item");
@@ -60,6 +92,10 @@
 
         // Tampilkan konten sesuai ID
         document.getElementById(id).classList.add("active");
+
+        if (backgrounds[id]) {
+          document.body.style.backgroundImage = `url(${backgrounds[id]})`;
+        }
       }
     </script>
   </body>
