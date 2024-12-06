@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="content">
+        <div id="home" class="carousel-item">
+          <img src="gpbl.jpg" alt="GPBL Image" />
+          <p>Kegiatan GPBL melibatkan...</p>
+        </div>
+        <div id="visimisi" class="carousel-item">
+          <img src="gpbl.jpg" alt="GPBL Image" />
+          <p>Kegiatan GPBL melibatkan...</p>
+        </div>
+        <div id="portofolio" class="carousel-item">
+          <div class="circles">
+            <div class="circle" onclick="showContent('kkn')">KKN</div>
+            <div class="circle" onclick="showContent('gpbl')">GPBL</div>
+            <div class="circle" onclick="showContent('bootcamp')">Bootcamp</div>
+          </div>
+          <div class="content">
+            <div id="kkn" class="carousel-item"></div>
+            <div id="gpbl" class="carousel-item">
+              <img src="gpbl.jpg" alt="GPBL Image" />
+              <p>Kegiatan GPBL melibatkan...</p>
+            </div>
+            <div id="bootcamp" class="carousel-item">
+              <img src="bootcamp.jpg" alt="Bootcamp Image" />
+              <p>Di National Bootcamp, saya...</p>
+            </div>
+          </div>
+        </div>
+        <div id="kontak" class="carousel-item">
+          <img src="gpbl.jpg" alt="GPBL Image" />
+          <p>Kegiatan GPBL melibatkan...</p>
+        </div>
+      </div>
+      <div class="boxes">
+        <div class="box" onclick="showContent('home')">Home</div>
+        <div class="box" onclick="showContent('visimisi')">
+          Vision and Mission
+        </div>
+        <div class="box" onclick="showContent('portofolio')">
+          What I've done
+        </div>
+        <div class="box" onclick="showContent('kontak')">Contact</div>
+      </div>
+    </div>
+
+    <script>
+      function showContent(id) {
+        // Hapus semua konten aktif
+        const items = document.querySelectorAll(".carousel-item");
+        items.forEach((item) => item.classList.remove("active"));
+
+        // Tampilkan konten sesuai ID
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #333;
+}
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-self: end;
+  grid-gap: 1rem;
+  padding: 5px;
+  margin: 1rem;
+}
+.box {
+  background-color: whitesmoke;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  color: #1a1a1a;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.box:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.circles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.circle:hover {
+  transform: scale(1.1);
+}
+.content {
+  width: 400px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+.carousel-item {
+  display: none;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+.carousel-item.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
