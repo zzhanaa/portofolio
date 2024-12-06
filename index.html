@@ -15,7 +15,7 @@
               <h2>ZHANA NUR ASMI QAMARA</h2>
               <p>
                 I am a third year student of Department of Mathematics at
-                Institute Tedchnology Sepuluh Nopember
+                Institute Technology Sepuluh Nopember
               </p>
             </div>
             <img
@@ -42,7 +42,8 @@
           </div>
           <div class="note">Zhana Nur Asmi Qamara</div>
         </div>
-        <div id="portofolio" class="portofolio">
+        <div id="portofolio" class="carousel-item">
+          <!-- Circles hanya ada di bagian Portofolio -->
           <div class="circles">
             <div class="circle" onclick="showContent1('kkn')">KKN</div>
             <div class="circle" onclick="showContent1('gpbl')">GPBL</div>
@@ -51,7 +52,9 @@
             </div>
           </div>
           <div class="content">
-            <div id="kkn" class="port"></div>
+            <div id="kkn" class="port">
+              <div class="kkn"></div>
+            </div>
             <div id="gpbl" class="port">
               <img src="gpbl.jpg" alt="GPBL Image" />
               <p>Kegiatan GPBL melibatkan...</p>
@@ -79,8 +82,9 @@
                 <a href="https://www.instagram.com/zzhanaa/?hl=en">@zzhanaa</a>
                 <a
                   href="https://www.linkedin.com/in/zhana-nur-asmi-qamara-320ab1250/"
-                  >Zhana Qamara</a
                 >
+                  Zhana Qamara
+                </a>
               </p>
             </div>
           </div>
@@ -115,18 +119,21 @@
         // Tampilkan konten sesuai ID
         document.getElementById(id).classList.add("active");
 
+        // Perubahan background
         if (backgrounds[id]) {
           document.body.style.backgroundImage = `url(${backgrounds[id]})`;
         }
       }
+
       function showContent1(id) {
-        // Hapus semua konten aktif
+        // Hapus semua konten portofolio aktif
         const items = document.querySelectorAll(".port");
         items.forEach((item) => item.classList.remove("active"));
 
-        // Tampilkan konten sesuai ID
+        // Tampilkan konten portofolio sesuai ID
         document.getElementById(id).classList.add("active");
 
+        // Perubahan background untuk portofolio
         if (backgrounds[id]) {
           document.body.style.backgroundImage = `url(${backgrounds[id]})`;
         }
