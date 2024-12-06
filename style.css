@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +24,7 @@ body {
   /* align-self: end; */
   grid-gap: 0.5rem;
   padding: 5px;
-  margin: 0l5rem;
+  margin: 0.5rem;
 }
 .box {
   background-color: whitesmoke;
@@ -106,7 +105,7 @@ body {
     animation: slideInFromBottom 0.8s ease-out;
   }
 }
-.content .note {
+.content.note {
   align-items: center;
   justify-items: center;
   margin-top: 3rem;
@@ -114,9 +113,21 @@ body {
     animation: slideInFromBottom 0.8s ease-out;
   }
 }
-.circles {
+.portofolio {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.isi {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.port {
+  display: none;
+}
+.port.active {
+  display: block;
+}
+.circles {
   align-items: center;
   gap: 20px;
 }
@@ -130,6 +141,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: transform 0.2s;
+  margin: 1rem;
 }
 .circle:hover {
   transform: scale(1.1);
@@ -155,4 +167,26 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+.kontak {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3rem;
+  .list-kontak {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+  }
+  .list-kontak1 {
+    background-color: rgba(9, 9, 9, 0.5);
+    padding: 1rem;
+  }
+  h3 {
+    animation: slideInFromTop 0.5s ease-out;
+  }
+  p {
+    color: aliceblue;
+    animation: slideInFromBottom 0.5s ease-out;
+    a {
+    }
+  }
 }
