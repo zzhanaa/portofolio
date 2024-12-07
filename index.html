@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Slick CSS
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script> -->
   </head>
   <body>
     <div class="page">
@@ -52,17 +65,45 @@
             </div>
             <div class="isi">
               <div id="kkn" class="port">
-                <div class="kkn"></div>
+                <h1>Student Study Service</h1>
+                <p>Kuliah Kerja Nyata</p>
+                <div class="kkn">
+                  <div class="upper">
+                    <img src="galery/pembukaan kkn.png" alt="pembukaan kkn" />
+                    <p>Kuliah Kerja Nyata</p>
+                    <p></p>
+                  </div>
+                  <div class="middle">
+                    <p>Kami melakukan banyak hal pada aplikasi ini dan</p>
+                    <a href="abilaindonesia.com">
+                      <img
+                        src="galery/tampilan abilaindonesia.png"
+                        alt="abilaindonesia"
+                    /></a>
+                    <p></p>
+                  </div>
+                  <div class="bottom">
+                    <img src="galery/foto profil kkn.png" alt="profil kkn" />
+                    <p>Kami melakukan banyak hal pada aplikasi ini dan</p>
+                    <p></p>
+                  </div>
+                </div>
               </div>
               <div id="gpbl" class="port">
-                <div class="gpbl"></div>
-                <img src="gpbl.jpg" alt="GPBL Image" />
-                <p>Kegiatan GPBL melibatkan...</p>
+                <h1>Global Project-based Learning</h1>
+                <p>in Data Science</p>
+                <div class="gpbl">
+                  <div class="upper"></div>
+                  <div class="bottom"></div>
+                </div>
               </div>
               <div id="bootcamp" class="port">
-                <div class="nb"></div>
-                <img src="bootcamp.jpg" alt="Bootcamp Image" />
-                <p>Di National Bootcamp, saya...</p>
+                <h1>National Bootcamp</h1>
+                <p>Bakti BCA Scholarship 2024</p>
+                <div class="bootcamp">
+                  <div class="upper"></div>
+                  <div class="bottom"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -143,6 +184,20 @@
       document.addEventListener("DOMContentLoaded", () => {
         showContent("home");
       });
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   $(".kkn, .gpbl, .bootcamp").slick({
+      //     dots: true, // Menampilkan navigasi berbentuk titik
+      //     arrows: true, // Menampilkan panah navigasi
+      //     infinite: true, // Slider berulang
+      //     speed: 500, // Kecepatan transisi (ms)
+      //     slidesToShow: 1, // Jumlah slide yang ditampilkan
+      //     slidesToScroll: 1, // Jumlah slide yang digeser
+      //     autoplay: false, // Slider otomatis
+      //     autoplaySpeed: 3000, // Waktu antar slide (ms)
+      //     adaptiveHeight: true, // Adjust height to fit content
+      //     cssEase: "ease-in-out",
+      //   });
+      // });
     </script>
   </body>
 </html>

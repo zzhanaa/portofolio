@@ -92,6 +92,26 @@ body {
     opacity: 1;
   }
 }
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .content .home .profil {
   border: 20px solid #d9d9d9;
 }
@@ -123,6 +143,13 @@ body {
 }
 .port {
   display: none;
+  flex: 1 1 300px; /* Elemen memiliki lebar minimal 300px dan fleksibel */
+  max-width: 650px; /* Batas maksimal agar konten tidak terlalu besar */
+  h1,
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 .port.active {
   display: block;
@@ -130,6 +157,10 @@ body {
 .circles {
   align-items: center;
   gap: 20px;
+  align-content: bottom;
+  margin: 2rem;
+  z-index: 2;
+  align-self: center;
 }
 .circle {
   width: 50px;
@@ -168,6 +199,51 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+.kkn {
+  overflow: hidden;
+  h1 {
+    align-items: flex-start;
+  }
+  .middle {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: justify;
+    margin-bottom: 0;
+    margin-top: 0;
+    img {
+      width: 90%;
+      animation: slideInFromRight 0.5s ease-out;
+    }
+    p {
+      animation: slideInFromRight 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
+  .upper,
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    margin: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 1rem;
+    gap: 1rem;
+    text-align: justify;
+    img {
+      width: 60%;
+      animation: slideInFromLeft 0.5s ease-out;
+    }
+    p {
+      animation: slideInFromLeft 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
 }
 h1 {
   animation: slideInFromTop 0.5s ease-out;
