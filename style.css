@@ -143,12 +143,11 @@ body {
 }
 .port {
   display: none;
-  flex: 1 1 300px; /* Elemen memiliki lebar minimal 300px dan fleksibel */
+  flex: 1 1 330px; /* Elemen memiliki lebar minimal 300px dan fleksibel */
   max-width: 650px; /* Batas maksimal agar konten tidak terlalu besar */
   h1,
   p {
-    margin-bottom: 0;
-    margin-top: 0;
+    margin: 0.5rem 0;
   }
 }
 .port.active {
@@ -207,16 +206,17 @@ body {
   }
   .middle {
     display: grid;
-    grid-template-columns: 2fr 1fr 0.5fr;
+    grid-template-columns: 2fr 1fr 0fr;
     gap: 1rem;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0 1rem;
+    padding: 0.1rem 1rem;
     text-align: justify;
     margin-bottom: 0;
     margin-top: 0;
     img {
       width: 90%;
       animation: slideInFromRight 0.5s ease-out;
+      border: 5px solid #d9d9d9;
     }
     p {
       animation: slideInFromRight 0.5s ease-out;
@@ -227,16 +227,103 @@ body {
   .upper,
   .bottom {
     display: grid;
-    grid-template-columns: 1fr 2fr 0.5fr;
-    margin: 1rem;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 1rem;
+    grid-template-columns: 1fr 2fr 0fr;
+    margin: 0 1rem;
+    padding: 0.2rem 1rem;
     gap: 1rem;
     text-align: justify;
     img {
       width: 60%;
       animation: slideInFromLeft 0.5s ease-out;
+      border: 5px solid #d9d9d9;
+    }
+    p {
+      animation: slideInFromLeft 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
+}
+.gpbl {
+  overflow: hidden;
+  h1 {
+    align-items: flex-start;
+  }
+  .middle {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0fr;
+    gap: 1rem;
+    margin: 0 1rem;
+    padding: 0.1rem 1rem;
+    text-align: justify;
+    margin-bottom: 0;
+    margin-top: 0;
+    img {
+      width: 90%;
+      animation: slideInFromRight 0.5s ease-out;
+      border: 5px solid #d9d9d9;
+    }
+    p {
+      animation: slideInFromRight 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
+  .upper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0fr;
+    margin: 0 1rem;
+    padding: 0.2rem 1rem;
+    gap: 1rem;
+    text-align: justify;
+    img {
+      width: 80%;
+      animation: slideInFromLeft 0.5s ease-out;
+      border: 5px solid #d9d9d9;
+    }
+    p {
+      animation: slideInFromLeft 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
+}
+.bootcamp {
+  overflow: hidden;
+  h1 {
+    align-items: flex-start;
+  }
+  .upper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0fr;
+    gap: 1rem;
+    margin: 0 1rem;
+    padding: 0.1rem 1rem;
+    text-align: justify;
+    margin-bottom: 0;
+    margin-top: 0;
+    img {
+      width: 60%;
+      animation: slideInFromRight 0.5s ease-out;
+      border: 5px solid #d9d9d9;
+    }
+    p {
+      animation: slideInFromRight 0.5s ease-out;
+      font-size: smaller;
+      align-items: star;
+    }
+  }
+  .middle {
+    display: grid;
+    grid-template-columns: 1fr 2fr 0fr;
+    margin: 0 1rem;
+    padding: 0.2rem 1rem;
+    gap: 1rem;
+    text-align: justify;
+    img {
+      width: 60%;
+      animation: slideInFromLeft 0.5s ease-out;
+      border: 5px solid #d9d9d9;
     }
     p {
       animation: slideInFromLeft 0.5s ease-out;
@@ -253,24 +340,40 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   margin: 3rem;
   .list-kontak {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    color: #1a1a1a;
+    align-items: start;
+    h3 {
+      animation: slideInFromTop 0.5s ease-out;
+    }
+    p {
+      animation: slideInFromBottom 0.5s ease-out;
+      display: grid;
+      grid-template-columns: auto;
+      a {
+        color: #1a1a1a;
+        margin-left: 2rem;
+        text-align: justify;
+      }
+    }
   }
   .list-kontak1 {
-    background-color: rgba(9, 9, 9, 0.5);
-    padding: 1rem;
-  }
-  h3 {
-    animation: slideInFromTop 0.5s ease-out;
-  }
-  p {
-    animation: slideInFromBottom 0.5s ease-out;
-    display: grid;
-    grid-template-columns: auto;
-    a {
-      color: aliceblue;
-      margin-left: 2rem;
-      text-align: justify;
+    background-color: rgba(9, 9, 9, 0.8);
+    padding: 2rem;
+    align-items: start;
+    h3 {
+      animation: slideInFromTop 0.5s ease-out;
+    }
+    p {
+      animation: slideInFromBottom 0.5s ease-out;
+      display: grid;
+      grid-template-columns: auto;
+      a {
+        color: aliceblue;
+        margin-left: 2rem;
+        text-align: justify;
+      }
     }
   }
 }
