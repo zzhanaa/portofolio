@@ -150,6 +150,9 @@ body {
     margin: 0.5rem 0;
     animation: slideInFromTop 0.8s ease-out;
   }
+  img:hover {
+    transform: scale(1.2);
+  }
 }
 .port.active {
   display: block;
