@@ -148,6 +148,7 @@ body {
   h1,
   p {
     margin: 0.5rem 0;
+    animation: slideInFromTop 0.8s ease-out;
   }
 }
 .port.active {
