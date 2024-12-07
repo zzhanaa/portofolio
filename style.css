@@ -105,10 +105,10 @@ body {
     animation: slideInFromBottom 0.8s ease-out;
   }
 }
-.content.note {
+.note {
   align-items: center;
   justify-items: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
   p {
     animation: slideInFromBottom 0.8s ease-out;
   }
@@ -135,6 +135,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  color: #1a1a1a;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -168,6 +169,9 @@ body {
   height: auto;
   margin-bottom: 10px;
 }
+h1 {
+  animation: slideInFromTop 0.5s ease-out;
+}
 .kontak {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -184,9 +188,13 @@ body {
     animation: slideInFromTop 0.5s ease-out;
   }
   p {
-    color: aliceblue;
     animation: slideInFromBottom 0.5s ease-out;
+    display: grid;
+    grid-template-columns: auto;
     a {
+      color: aliceblue;
+      margin-left: 2rem;
+      text-align: justify;
     }
   }
 }
