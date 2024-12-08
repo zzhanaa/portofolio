@@ -135,7 +135,8 @@ body {
   h2 {
     animation: slideInFromTop 0.8s ease-out;
   }
-  p {
+  p,
+  ol {
     animation: slideInFromBottom 0.8s ease-out;
   }
 }
