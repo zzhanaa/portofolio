@@ -22,6 +22,12 @@
   <body>
     <div class="page">
       <div class="content">
+        <div id="initial" class="carousel-item">
+          <div class="initial">
+            <h2 class="title">Personal Branding</h2>
+            <h2 class="name">Zhana Nur Asmi Qamara</h2>
+          </div>
+        </div>
         <div id="home" class="carousel-item">
           <div class="home">
             <div class="tulisan">
@@ -44,6 +50,39 @@
               width="50%"
               alt="foto profil zhana"
             />
+          </div>
+        </div>
+        <div id="difference" class="carousel-item">
+          <div class="difference">
+            <div class="container">
+              <div class="cap">Apa yang Membedakan Saya dari Orang Lain?</div>
+              <div class="pic"><a href=""></a></div>
+            </div>
+            <div class="container">
+              <div class="cap">Apa yang Membedakan Saya dari Orang Lain?</div>
+              <div class="pic"><a href=""></a></div>
+            </div>
+            <div class="container">
+              <div class="cap">Apa yang Membedakan Saya dari Orang Lain?</div>
+              <div class="pic"><a href=""></a></div>
+            </div>
+            <div class="container">
+              <div class="cap">Apa yang Membedakan Saya dari Orang Lain?</div>
+              <div class="pic"><a href=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div id="target" class="carousel-item">
+          <div class="target">
+            <h2>Target</h2>
+            <h3>Filed: PMBD</h3>
+            <div class="step">
+              <ol>
+                <li>denganjdhaohd</li>
+                <li>denganjdhaohd</li>
+                <li>denganjdhaohd</li>
+              </ol>
+            </div>
           </div>
         </div>
         <div id="visimisi" class="carousel-item">
@@ -81,10 +120,24 @@
             <p><i>Zhana Qamara</i></p>
           </div>
         </div>
+        <div id="plans" class="carousel-item">
+          <div class="plans">
+            <h3>Mata kuliah yang akan diambil pada semester 6:</h3>
+            <ol>
+              <li>majajd</li>
+              <li>majajd</li>
+              <li>majajd</li>
+              <li>majajd</li>
+            </ol>
+          </div>
+        </div>
         <div id="portofolio" class="carousel-item">
           <!-- Circles hanya ada di bagian Portofolio -->
           <div class="portofolio">
             <div class="circles">
+              <div class="circle" onclick="showContent1('math-project')">
+                MP
+              </div>
               <div class="circle" onclick="showContent1('kkn')">KKN</div>
               <div class="circle" onclick="showContent1('gpbl')">GPBL</div>
               <div class="circle" onclick="showContent1('bootcamp')">NB</div>
@@ -111,7 +164,7 @@
                       I was part of the website development team to enhance the
                       online presence of MSMEs. My role involved designing and
                       building the
-                      <a href="https://abilaindonesia.com "
+                      <a href="https://abilaindonesia.com " class="abila"
                         >abilaindonesia.com</a
                       >
                       site using HTML and CSS.
@@ -134,6 +187,17 @@
                     </p>
                     <p></p>
                   </div>
+                </div>
+              </div>
+              <div id="math-project" class="port">
+                <h1>Mathematics' Projects</h1>
+                <div class="project">
+                  <p></p>
+                  <a href=""></a>
+                </div>
+                <div class="project">
+                  <p></p>
+                  <a href=""></a>
                 </div>
               </div>
               <div id="gpbl" class="port">
@@ -228,10 +292,14 @@
         </div>
       </div>
       <div class="boxes">
-        <div class="box" onclick="showContent('home')">Home</div>
+        <div class="box" onclick="showContent('initial')">Home</div>
+        <div class="box" onclick="showContent('home')">Description</div>
+        <div class="box" onclick="showContent('difference')">Difference</div>
+        <div class="box" onclick="showContent('target')">Target</div>
         <div class="box" onclick="showContent('visimisi')">
           Vision and Mission
         </div>
+        <div class="box" onclick="showContent('plans')">Plans</div>
         <div class="box" onclick="showContent('portofolio')">
           What I've done
         </div>
@@ -242,6 +310,8 @@
     <script>
       // Pemetaan background
       const backgrounds = {
+        initial: "galery/Home.png",
+        difference: "galery/Home.png",
         home: "galery/Home.png",
         visimisi: "galery/About.png",
         portofolio: "galery/About.png",
@@ -275,7 +345,7 @@
         }
       }
       document.addEventListener("DOMContentLoaded", () => {
-        showContent("home");
+        showContent("initial");
         showContent1("kkn");
       });
       // document.addEventListener("DOMContentLoaded", () => {

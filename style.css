@@ -18,9 +18,29 @@ body {
   gap: 20px;
   /* background-color: #333; */
 }
+.initial {
+  display: block;
+  align-items: center;
+  justify-self: center;
+  .title {
+    font-size: 40pt;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    animation: slideInFromRight 0.8s ease-in-out;
+  }
+  .name {
+    font-size: 20pt;
+    margin: 0;
+    padding: 0;
+    color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: slideInFromLeft 0.8s ease-in-out;
+  }
+}
 .boxes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto auto auto auto auto auto auto auto;
   /* align-self: end; */
   grid-gap: 0.5rem;
   padding: 5px;
@@ -39,9 +59,12 @@ body {
   align-items: center;
   text-align: center;
   transition: transform 0.2s ease-out;
+  border-radius: 0.5rem;
 }
 .box:hover {
   transform: translateY(-5px) scale(1.05);
+  background-color: rgba(9, 9, 9, 0.8);
+  color: whitesmoke;
 }
 .content {
   width: 100%;
