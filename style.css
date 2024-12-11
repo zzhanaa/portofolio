@@ -99,6 +99,89 @@ body {
     }
   }
 }
+
+.difference {
+  h2 {
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    animation: slideInFromTop 0.8s ease-in-out;
+    margin-bottom: 2rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* flex: 1 1 400px; /* Elemen memiliki lebar minimal 300px dan fleksibel */
+    /* max-width: 700px; Batas maksimal agar konten tidak terlalu besar */
+    align-content: center;
+    justify-content: center;
+    margin-block: 2rem;
+  }
+  img {
+    width: 40%;
+  }
+  .container1 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    animation: slideInFromBottom 0.8s ease-in-out;
+    p {
+      font-size: smaller;
+      text-align: justify;
+      padding: 1rem;
+    }
+  }
+  .container2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    animation: slideInFromTop 0.8s ease-in-out;
+    p {
+      font-size: smaller;
+    }
+  }
+}
+
+.target {
+  h2,
+  h3 {
+    animation: slideInFromTop 0.8s ease-in-out;
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: column; /* Agar elemen list ditata secara vertikal */
+    justify-content: center; /* Menempatkan elemen di tengah secara vertikal */
+    align-items: center; /* Menempatkan elemen di tengah secara horizontal */
+    text-align: justify; /* Menjustifikasi teks di dalam setiap <li> */
+    font-weight: bolder;
+    li {
+      animation: slideInFromRight 0.8s ease-in-out;
+      font-weight: lighter; /* Mengembalikan font-weight pada <li> */
+      text-align: justify;
+      font-size: smaller;
+    }
+  }
+}
+.plans {
+  h2,
+  h3 {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    animation: slideInFromTop 0.8s ease-in-out;
+  }
+  ol {
+    display: flex;
+    flex-direction: column;
+    animation: slideInFromBottom 0.8s ease-in-out;
+  }
+}
+.math-project .project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  margin-block: 2rem;
+}
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(50px);
